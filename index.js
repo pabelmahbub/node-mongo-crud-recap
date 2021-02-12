@@ -4,7 +4,9 @@ const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectID;
 const { ObjectID } = require("mongodb");
 
-const uri = "mongodb+srv://pabelmahbub*****@cluster0.xig7o.mongodb.net/organicdb?retryWrites=true&w=majority";
+
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.swu9d.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+
 const client = new MongoClient(uri, { useNewUrlParser: true,useUnifiedTopology: true  });
 
 
